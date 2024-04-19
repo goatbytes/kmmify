@@ -4,6 +4,11 @@ Welcome to Kmmify, a streamlined template to kickstart your Kotlin Multiplatform
 template provides a foundation for building cross-platform applications sharing business logic
 across iOS, Android, and Web platforms while allowing for platform-specific implementations.
 
+[![Style Guide-Kotlin](https://img.shields.io/badge/Style%20Guide-Kotlin-7F52FF.svg?style=flat&labelColor=black&color=7F52FF&logo=kotlin)](https://styles.goatbytes.io/lang/kotlin)
+![License](https://img.shields.io/badge/License-Apache%20V2.0-blue)
+![Platform](https://img.shields.io/badge/Platform-Android%20|%20iOS%20|%20Desktop%20|%20Web-green)
+![Version](https://img.shields.io/badge/Version-0.0.1-yellow)
+
 ## Features
 
 - Multiplatform project setup for Android, iOS, and Web
@@ -98,6 +103,16 @@ requests to our repository.
 
 Distributed under the Apache v2.0 License. See `LICENSE.txt` for more information.
 
-## Contact
+## About GoatBytes.IO
 
-GoatBytes.IO - engineering@goatbytes.io
+![GoatBytesLogo](https://storage.googleapis.com/ktor-goatbytes.appspot.com/images/logo/1000h/goatbytes-logo-with-text.png)
+
+At **GoatBytes.IO**, our mission is to develop secure software solutions that empower businesses to
+transform the world. With a focus on innovation and excellence, we strive to deliver cutting-edge
+products that meet the evolving needs of businesses across various industries.
+
+[![GitHub](https://img.shields.io/badge/GitHub-GoatBytes-181717?logo=github)](https://github.com/goatbytes)
+[![Twitter](https://img.shields.io/badge/Twitter-GoatBytes-1DA1F2?logo=twitter)](https://twitter.com/goatbytes)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-GoatBytes-0077B5?logo=linkedin)](https://www.linkedin.com/company/goatbytes)
+[![Instagram](https://img.shields.io/badge/Instagram-GoatBytes.io-E4405F?logo=instagram)](https://www.instagram.com/goatbytes.io/)
+
