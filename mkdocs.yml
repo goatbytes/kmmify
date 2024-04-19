@@ -1,0 +1,70 @@
+site_name: WEJ
+site_url: https://goatbytes.github.io/wej
+repo_name: WEJ
+repo_url: https://github.com/goatbytes/WEJ
+site_description: "A cutting-edge cross-platform SDK designed to streamline the process of uniquely identifying devices across different platforms."
+site_author: GoatBytes.IO
+remote_branch: gh-pages
+edit_uri: ""
+
+copyright: 'Copyright &copy; 2024 GoatBytes.IO.'
+
+theme:
+  name: 'material'
+  favicon: images/favicon.png
+  logo: images/logo.png
+  palette:
+    # Palette toggle for light mode
+    - scheme: default
+      media: "(prefers-color-scheme: light)"
+      primary: 'deep orange'
+      accent: 'white'
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    # Palette toggle for dark mode
+    - scheme: slate
+      media: "(prefers-color-scheme: dark)"
+      primary: 'deep orange'
+      accent: 'white'
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  icon:
+    repo: fontawesome/brands/github
+
+extra:
+  social:
+    - icon: fontawesome/brands/twitter
+      link: https://twitter.com/goatbytes
+    - icon: fontawesome/brands/instagram
+      link: https://instagram.com/goatbytes.io
+    - icon: fontawesome/brands/github
+      link: https://github.com/goatbytes
+
+extra_css:
+  - 'css/app.css'
+
+markdown_extensions:
+  - smarty
+  - codehilite:
+      guess_lang: false
+  - footnotes
+  - meta
+  - toc:
+      permalink: true
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.caret
+  - pymdownx.inlinehilite
+  - pymdownx.magiclink
+  - pymdownx.smartsymbols
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tilde
+  - tables
+
+nav:
+  - 'Overview': index.md
+  - 'Documentation': docs/index.html

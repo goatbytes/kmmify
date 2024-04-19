@@ -1,0 +1,92 @@
+# build: https://detekt.dev/docs/introduction/configuration/
+build:
+  maxIssues: 0
+
+# comments: https://detekt.dev/docs/rules/comments/
+comments:
+  active: true
+  CommentOverPrivateFunction:
+    active: false
+  CommentOverPrivateProperty:
+    active: false
+  DeprecatedBlockTag:
+    active: true
+  EndOfSentenceFormat:
+    active: false
+  KDocReferencesNonPublicProperty:
+    active: true
+  OutdatedDocumentation:
+    active: true
+  UndocumentedPublicClass:
+    active: true
+  UndocumentedPublicFunction:
+    active: true
+
+# complexity: https://detekt.dev/docs/rules/complexity/
+complexity:
+  active: true
+  LongParameterList:
+    active: true
+    constructorThreshold: 10
+    functionThreshold: 8
+  NestedScopeFunctions:
+    active: true
+
+# exceptions: https://detekt.dev/docs/rules/exceptions/
+exceptions:
+  active: true
+
+# formatting: https://detekt.dev/docs/rules/formatting/
+formatting:
+  autoCorrect: true
+  ClassName:
+    active: true
+  IfElseWrapping:
+    active: true
+  Indentation:
+    active: true
+    indentSize: 2
+  KDocFormatting:
+    active: true
+    enableParamNameAlignment: true
+    enableParameterListWrapping: true
+  MaxLineLength:
+    active: true
+    maxLineLength: 100
+  NewLineAtEndOfFile:
+    active: true
+  NoConsecutiveBlankLines:
+    active: true
+  NoEmptyClassBody:
+    active: true
+  SpacingAroundColon:
+    active: true
+  SpacingAroundComma:
+    active: true
+  SpacingAroundCurly:
+    active: true
+    includeSpacesBeforeBrace: true
+  SpacingAroundKeywords:
+    active: true
+  SpacingAroundOperators:
+    active: true
+  SpacingAroundParens:
+    active: true
+    includeSpacesBeforeParenthesis: true
+
+# naming: https://detekt.dev/docs/rules/naming/
+naming:
+  BooleanPropertyNaming:
+    active: true
+
+# style: https://detekt.dev/docs/rules/style/
+style:
+  active: true
+  MagicNumber:
+    active: true
+    ignoreNumbers: [ '-2', '-1', '0', '0.5', '1', '2', '3', '31', '100', '1000' ]
+  WildcardImport:
+    active: true
+  ForbiddenComment:
+    active: true
+    allowedPatterns: "(TODO|FIXME):\\s\\[[a-zA-Z]{2,}-?\\d{2,}\\]\\s"

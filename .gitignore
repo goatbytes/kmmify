@@ -1,0 +1,74 @@
+# Compiled source #
+*.class
+*.jar
+*.war
+*.ear
+*.out
+
+# Build artifacts #
+build/
+out/
+**/build/
+local-build-outputs/
+
+# Gradle #
+.gradle/
+!gradle/wrapper/gradle-wrapper.jar
+local.properties
+
+# IntelliJ IDEA & Android Studio #
+.idea/
+*.iml
+*.ipr
+*.iws
+*.idea_modules/
+captures/
+navigation/
+
+# VS Code #
+.vscode/
+
+# macOS #
+.DS_Store
+
+# Logs #
+*.log
+*.log.*
+logs/
+
+# Node #
+node_modules/
+
+# Special Mkdocs files #
+/site
+docs/[0-9]*
+docs/docs
+
+# Misc #
+*.nar
+*.tar.gz
+*.sql
+*.sqlite
+*.swp
+*.swo
+*.tmp
+*.bak
+*.swbackup
+*.sav
+*.tgz
+*.gzip
+*.bzip2
+*.zip
+*.rar
+*.7z
+*.gz
+*.xz
+*.exe
+*.dll
+*.so
+*.dylib
+*.test
+*.hprof
+
+# Specific directory inclusion #
+!buildSrc/src/main/kotlin/build/
