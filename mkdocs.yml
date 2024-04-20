@@ -1,7 +1,7 @@
-site_name: WEJ
-site_url: https://goatbytes.github.io/wej
-repo_name: WEJ
-repo_url: https://github.com/goatbytes/WEJ
+site_name: kmmify
+site_url: https://goatbytes.github.io/kmmify
+repo_name: kmmify
+repo_url: https://github.com/goatbytes/kmmify
 site_description: "A cutting-edge cross-platform SDK designed to streamline the process of uniquely identifying devices across different platforms."
 site_author: GoatBytes.IO
 remote_branch: gh-pages
