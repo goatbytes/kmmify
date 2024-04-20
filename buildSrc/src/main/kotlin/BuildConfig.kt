@@ -33,8 +33,6 @@ object BuildConfig {
   const val GROUP = "io.goatbytes.kmmify"
   val VERSION by lazy { Version.get(project) }
 
-  val DETEKT_CONFIG by lazy { "${project.rootDir}/detekt.yml" }
-
   /**
    * Version Update Instructions:
    *
@@ -105,13 +103,20 @@ object BuildConfig {
   }
 
   /**
+   * Contains configuration for Detekt static analysis plugin.
+   */
+  object Detekt {
+    val CONFIG by lazy { "${project.rootDir}/detekt.yml" }
+    val jvmTarget = JavaVersion.VERSION_1_8.toString()
+  }
+
+  /**
    * Contains constants for Dokka
    */
   object Dokka {
     const val DOC_LINK = "https://kotlin.github.io/kotlinx.coroutines/kotlinx-coroutines-core/"
     const val PKG_LIST = "https://kotlin.github.io/kotlinx.coroutines/package-list"
     val outputDirectory: File get() = project.file("${project.rootDir}/docs/docs")
-    val jvmTarget = JavaVersion.VERSION_1_8.toString()
   }
 
   /**

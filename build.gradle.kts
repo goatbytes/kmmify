@@ -24,7 +24,6 @@ plugins {
   alias(libs.plugins.android.library).apply(false)
   alias(libs.plugins.kotlin.multiplatform).apply(false)
   alias(libs.plugins.detekt)
-  alias(libs.plugins.dokka)
 }
 
 allprojects {
@@ -38,10 +37,15 @@ dependencies {
 
 detekt {
   buildUponDefaultConfig = true
-  config.setFrom(BuildConfig.DETEKT_CONFIG)
+  config.setFrom(BuildConfig.Detekt.CONFIG)
+}
+
+tasks.withType<DetektCreateBaselineTask>().configureEach {
+  jvmTarget = BuildConfig.Detekt.jvmTarget
 }
 
 tasks.withType<Detekt>().configureEach {
+  jvmTarget = BuildConfig.Detekt.jvmTarget
   reports {
     html.required.set(true)
     md.required.set(true)
@@ -51,41 +55,12 @@ tasks.withType<Detekt>().configureEach {
   }
 }
 
-tasks.withType<Detekt>().configureEach {
-  jvmTarget = BuildConfig.Dokka.jvmTarget
-}
-
-tasks.withType<DetektCreateBaselineTask>().configureEach {
-  jvmTarget = BuildConfig.Dokka.jvmTarget
-}
-
 val detektAll by tasks.registering(Detekt::class) {
   description = "Run detekt analysis on entire project"
   parallel = true
   buildUponDefaultConfig = true
-  config.setFrom(BuildConfig.DETEKT_CONFIG)
+  config.setFrom(BuildConfig.Detekt.CONFIG)
   setSource(files(projectDir))
   include("**/*.kt", "**/*.kts")
   exclude("resources/", "*/build/*")
-}
-
-tasks.dokkaHtml {
-  outputDirectory.set(BuildConfig.Dokka.outputDirectory)
-  dokkaSourceSets {
-    configureEach {
-      noStdlibLink.set(false)
-      noJdkLink.set(false)
-      externalDocumentationLink {
-        url.set(java.net.URL(BuildConfig.Dokka.DOC_LINK))
-        packageListUrl.set(java.net.URL(BuildConfig.Dokka.PKG_LIST))
-      }
-      displayName.set(
-        when (val name = displayName.get() ?: name) {
-          "jvm" -> "JVM"
-          "js" -> "JavaScript"
-          else -> name.capitalize()
-        }
-      )
-    }
-  }
 }

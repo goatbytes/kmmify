@@ -17,10 +17,12 @@
 
 import build.Os
 import org.jetbrains.kotlin.gradle.dsl.JsModuleKind
+import java.net.URL
 
 plugins {
   alias(libs.plugins.kotlin.multiplatform)
   alias(libs.plugins.android.library)
+  alias(libs.plugins.dokka)
   id("publication.gh-packages")
 }
 
@@ -120,5 +122,26 @@ android {
   compileSdk = BuildConfig.Android.COMPILE_SDK
   defaultConfig {
     minSdk = BuildConfig.Android.MIN_SDK
+  }
+}
+
+tasks.dokkaHtml {
+  outputDirectory.set(BuildConfig.Dokka.outputDirectory)
+  dokkaSourceSets {
+    configureEach {
+      noStdlibLink.set(false)
+      noJdkLink.set(false)
+      externalDocumentationLink {
+        url.set(URL(BuildConfig.Dokka.DOC_LINK))
+        packageListUrl.set(URL(BuildConfig.Dokka.PKG_LIST))
+      }
+      displayName.set(
+        when (val name = displayName.get() ?: name) {
+          "jvm" -> "JVM"
+          "js" -> "JavaScript"
+          else -> name.capitalize()
+        }
+      )
+    }
   }
 }
