@@ -1,5 +1,5 @@
 site_name: kmmify
-site_url: https://goatbytes.github.io/kmmify
+site_url: https://kmmify.goatbytes.io
 repo_name: kmmify
 repo_url: https://github.com/goatbytes/kmmify
 site_description: "A cutting-edge cross-platform SDK designed to streamline the process of uniquely identifying devices across different platforms."
@@ -7,64 +7,100 @@ site_author: GoatBytes.IO
 remote_branch: gh-pages
 edit_uri: ""
 
-copyright: 'Copyright &copy; 2024 GoatBytes.IO.'
+nav:
+  - 'Overview': index.md
+  - 'Documentation': docs/index.html
+  - 'KMP Wizard': https://kmp.jetbrains.com/
+  - 'KMP Template Gallery': https://kmp.jetbrains.com/#templateGallery
+  - 'KMP Development': https://www.jetbrains.com/help/kotlin-multiplatform-dev/get-started.html
 
 theme:
   name: 'material'
-  favicon: images/favicon.png
-  logo: images/logo.png
+  favicon: assets/img/favicon.png
+  logo: assets/img/logo.png
+  custom_dir: docs/overrides
+  features:
+    - instant
+    - navigation.instant
+    - navigation.sections
+    - navigation.top
+    - search.suggest
+    - search.highlight
+    #    - toc.integrate
+    - content.code.annotate
   palette:
-    # Palette toggle for light mode
-    - scheme: default
+    - scheme: default # Palette toggle for light mode
       media: "(prefers-color-scheme: light)"
-      primary: 'deep orange'
+      primary: 'custom'
       accent: 'white'
       toggle:
         icon: material/brightness-7
         name: Switch to dark mode
-    # Palette toggle for dark mode
-    - scheme: slate
+    - scheme: slate # Palette toggle for dark mode
       media: "(prefers-color-scheme: dark)"
-      primary: 'deep orange'
+      primary: 'custom'
       accent: 'white'
       toggle:
         icon: material/brightness-4
         name: Switch to light mode
+  font:
+    heading: 'Red Hat Display'
+    text: 'Red Hat Text'
+    code: 'Red Hat Mono'
   icon:
     repo: fontawesome/brands/github
 
+markdown_extensions:
+  - admonition
+  - meta
+  - pymdownx.blocks.admonition
+  - pymdownx.blocks.tab:
+      alternate_style: true
+  - pymdownx.blocks.details
+  - pymdownx.blocks.definition
+  - pymdownx.superfences
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.mark
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - neoteroi.cards
+  - footnotes
+  - attr_list
+  - md_in_html
+
+plugins:
+  - search
+  - minify:
+      minify_html: true
+  - git-revision-date-localized:
+      type: timeago
+      fallback_to_build_date: true
+
 extra:
+  homepage: https://goatbytes.io
   social:
-    - icon: fontawesome/brands/twitter
-      link: https://twitter.com/goatbytes
+    - icon: fontawesome/brands/x-twitter
+      link: https://x.com/goatbytes
     - icon: fontawesome/brands/instagram
       link: https://instagram.com/goatbytes.io
     - icon: fontawesome/brands/github
       link: https://github.com/goatbytes
+    - icon: fontawesome/brands/linkedin
+      link: https://www.linkedin.com/company/goatbytes
+  analytics:
+    provider: google
+    property: G-V0TQY16GNY
+  generator: false
 
 extra_css:
-  - 'css/app.css'
+  - 'assets/css/app.css'
 
-markdown_extensions:
-  - smarty
-  - codehilite:
-      guess_lang: false
-  - footnotes
-  - meta
-  - toc:
-      permalink: true
-  - pymdownx.betterem:
-      smart_enable: all
-  - pymdownx.caret
-  - pymdownx.inlinehilite
-  - pymdownx.magiclink
-  - pymdownx.smartsymbols
-  - pymdownx.superfences
-  - pymdownx.tabbed:
-      alternate_style: true
-  - pymdownx.tilde
-  - tables
-
-nav:
-  - 'Overview': index.md
-  - 'Documentation': docs/index.html
+extra_javascript:
+  - 'assets/js/app.js'
