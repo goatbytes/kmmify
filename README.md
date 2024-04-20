@@ -1,13 +1,14 @@
-# Kmmify - Kotlin Multiplatform Template
+# kmmify - Kotlin Multiplatform Template
 
 Welcome to Kmmify, a streamlined template to kickstart your Kotlin Multiplatform projects. This
 template provides a foundation for building cross-platform applications sharing business logic
 across iOS, Android, and Web platforms while allowing for platform-specific implementations.
 
+![kmmify](.art/kmmify.webp)
+
 [![Style Guide-Kotlin](https://img.shields.io/badge/Style%20Guide-Kotlin-7F52FF.svg?style=flat&labelColor=black&color=7F52FF&logo=kotlin)](https://styles.goatbytes.io/lang/kotlin)
 ![License](https://img.shields.io/badge/License-Apache%20V2.0-blue)
 ![Platform](https://img.shields.io/badge/Platform-Android%20|%20iOS%20|%20Desktop%20|%20Web-green)
-![Version](https://img.shields.io/badge/Version-0.0.1-yellow)
 
 ## Features
 
