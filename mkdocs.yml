@@ -70,7 +70,6 @@ markdown_extensions:
       pygments_lang_class: true
   - pymdownx.inlinehilite
   - pymdownx.snippets
-  - neoteroi.cards
   - footnotes
   - attr_list
   - md_in_html
