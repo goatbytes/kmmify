@@ -106,7 +106,7 @@ Distributed under the Apache v2.0 License. See `LICENSE.txt` for more informatio
 
 ## About GoatBytes.IO
 
-![GoatBytesLogo](https://storage.googleapis.com/ktor-goatbytes.appspot.com/images/logo/1000h/goatbytes-logo-with-text.png)
+![GoatBytesLogo](.art/banner.webp)
 
 At **GoatBytes.IO**, our mission is to develop secure software solutions that empower businesses to
 transform the world. With a focus on innovation and excellence, we strive to deliver cutting-edge
