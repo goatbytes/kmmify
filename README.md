@@ -1,8 +1,10 @@
-# kmmify - Kotlin Multiplatform Template
+# kmmify - Kotlin Multiplatform Library Template
 
-Welcome to Kmmify, a streamlined template to kickstart your Kotlin Multiplatform projects. This
-template provides a foundation for building cross-platform applications sharing business logic
-across iOS, Android, and Web platforms while allowing for platform-specific implementations.
+Welcome to kmmify, a comprehensive template designed to jumpstart your Kotlin Multiplatform library
+projects. This template simplifies the creation and maintenance of cross-platform libraries,
+enabling shared business logic across multiple platforms including iOS, Android, Web, and various
+native platforms like Linux, watchOS, and tvOS. Kmmify is the perfect starting point for developers
+looking to build robust, multiplatform solutions efficiently.
 
 ![kmmify](.art/kmmify.webp)
 
@@ -10,86 +12,82 @@ across iOS, Android, and Web platforms while allowing for platform-specific impl
 ![License](https://img.shields.io/badge/License-Apache%20V2.0-blue)
 ![Platform](https://img.shields.io/badge/Platform-Android%20|%20iOS%20|%20Desktop%20|%20Web-green)
 
-## Features
+## Key Features
 
-- Multiplatform project setup for Android, iOS, and Web
-- Pre-configured Gradle scripts for building and testing
-- Documentation ready with MkDocs
-- Code analysis setup with Detekt
+- **Extensive Multiplatform Support:** Configured for Android, iOS, Web, and Native platforms
+  (including Linux, watchOS, and tvOS), ensuring broad compatibility and versatility.
+- **Pre-configured Build System:** Includes ready-to-use Gradle scripts for building and testing
+  your libraries.
+- **Code Quality Assurance:** Set up with Detekt for static code analysis to maintain high code
+  standards.
+- **Documentation Ready:** Integrated with MkDocs and Dokka for generating comprehensive project
+  documentation.
+- **Release Signing:** Sign your artifacts before publishing for enhanced security and integrity.
+- **GitHub Packages Publishing:** Easily publish your library to GitHub Packages with a single
+  command.
+- **CI/CD Ready:** Integrated with GitHub Actions for automated testing and deployment.
 
-## Getting Started
+## Quick Start Guide
 
 ### Prerequisites
 
-Ensure you have the following installed:
-
-- JDK 1.8 or newer
 - Kotlin Multiplatform compatible IDE (IntelliJ IDEA recommended)
-- Gradle 7.0 or newer
 
-### Setup
+### Repository Setup
 
-Clone the repository:
+1. Click on the **Use this template** button to create a new repository from this template.
+2. Clone the repository to your local machine using the following command:
+   ```shell
+   git clone https://github.com/goatbytes/kmmify.git
+   ```
+3. Modify the [`BuildConfig.kt`](buildSrc/src/main/kotlin/BuildConfig.kt) file with your project
+   details.
 
-```sh
-git clone https://github.com/goatbytes/kmmify.git
-cd kmmify
-```
+### Static Code Analysis with Detekt
 
-### Building the Project
+Run Detekt to ensure code quality:
 
-Build the project using Gradle:
-
-```sh
-./gradlew build
-```
-
-## Documentation
-
-### Running Detekt
-
-To run Detekt for static code analysis:
-
-```sh
+```shell
 ./gradlew detektAll
 ```
 
-### Generating Documentation with Dokka
+### Generate Documentation
 
 Generate project documentation using Dokka:
 
-```sh
+```shell
 ./gradlew dokkaHtml
 ```
 
-### Serving Documentation Locally with MkDocs
+### Publish Documentation to GitHub Pages
 
-To view the documentation locally, first ensure you have MkDocs installed:
+1. Install `mkdocs`:
+   ```shell
+   pip install mkdocs
+   pip install mkdocs-material
+   pip install pymdown-extensions
+   pip install mkdocs-minify-plugin
+   pip install mkdocs-git-revision-date-localized-plugin
+   ```
+2. Serve the documentation locally:
+   ```shell
+   mkdocs serve
+   ```
+3. Access the documentation at `http://localhost:8000`.
+4. Publish the documentation to GitHub Pages:
+   ```shell
+   mkdocs gh-deploy
+   ```
 
-```sh
-pip install mkdocs
-```
+### Secure Publishing with Release Signing
 
-Then serve the documentation:
+Ensure your library is securely published by signing your artifacts before release:
 
-```sh
-mkdocs serve
-```
+#### Setup for Release Signing
 
-## Publishing
-
-### Publishing to GitHub Packages
-
-Ensure you have the appropriate permissions and your GitHub Token is set up. Then, run:
-
-```sh
-./gradlew publish
-```
-
-### Release Signing
-
-To sign your artifacts before publishing, ensure the following properties are set in your
-gradle.properties or passed via environment variables:
+To sign your releases, you need to generate signing keys. You can use tools like GPG or OpenSSL.
+Then ensure the following properties are set in your `~/.gradle/gradle.properties` or passed via
+environment variables:
 
 - SIGNING_KEY_ID
 - SIGNING_KEYRING
@@ -116,4 +114,3 @@ products that meet the evolving needs of businesses across various industries.
 [![Twitter](https://img.shields.io/badge/Twitter-GoatBytes-1DA1F2?logo=twitter)](https://twitter.com/goatbytes)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-GoatBytes-0077B5?logo=linkedin)](https://www.linkedin.com/company/goatbytes)
 [![Instagram](https://img.shields.io/badge/Instagram-GoatBytes.io-E4405F?logo=instagram)](https://www.instagram.com/goatbytes.io/)
-
