@@ -63,11 +63,7 @@ Generate project documentation using Dokka:
 
 1. Install `mkdocs`:
    ```shell
-   pip install mkdocs
-   pip install mkdocs-material
-   pip install pymdown-extensions
-   pip install mkdocs-minify-plugin
-   pip install mkdocs-git-revision-date-localized-plugin
+   pip install mkdocs mkdocs-material pymdown-extensions mkdocs-minify-plugin mkdocs-git-revision-date-localized-plugin
    ```
 2. Serve the documentation locally:
    ```shell
