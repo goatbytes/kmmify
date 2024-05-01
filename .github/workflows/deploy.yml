@@ -15,7 +15,7 @@ jobs:
             tasks: publishIosArm64PublicationToGitHubPackagesRepository publishIosX64PublicationToGitHubPackagesRepository publishMacosArm64PublicationToGitHubPackagesRepository publishMacosX64PublicationToGitHubPackagesRepository publishTvosArm64PublicationToGitHubPackagesRepository publishTvosX64PublicationToGitHubPackagesRepository publishWatchosArm32PublicationToGitHubPackagesRepository publishWatchosArm64PublicationToGitHubPackagesRepository publishWatchosX64PublicationToGitHubPackagesRepository
 
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
         with:
           fetch-depth: 0
 
