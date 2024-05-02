@@ -111,8 +111,8 @@ class CommandLine(private val project: Project) {
           errorOutput = stderr
         }
         return Result(
-          stdout = stdout.toString(Charsets.UTF_8),
-          stderr = stderr.toString(Charsets.UTF_8),
+          stdout = stdout.toString(Charsets.UTF_8).trim(),
+          stderr = stderr.toString(Charsets.UTF_8).trim(),
           exitCode = result.exitValue
         )
       } finally {
