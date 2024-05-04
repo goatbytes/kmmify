@@ -1,17 +1,16 @@
 /*
- * Copyright 2024 GoatBytes.IO
+ * Copyright (c) 2024 GoatBytes.IO. All rights reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
+ * This file is part of peopledatalabs-kotlin project by GoatBytes.IO and is released under the
+ * GoatBytes.IO PDL Software License Agreement.
  *
- *     http://www.apache.org/licenses/LICENSE-2.0
+ * For details, see the LICENSE.md file in the root of the project or contact legal@goatbytes.io
+ * for a full copy.
  *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
+ * RESTRICTIONS: This software is provided for internal use only. Unauthorized use, copying,
+ * modification, or distribution of this software is strictly prohibited. This software is offered
+ * "AS IS", without warranties of any kind, and subject to the limitations stated in the license
+ * agreement.
  *
  */
 
@@ -20,6 +19,7 @@ package build
 import build.Version.Identifier.Alpha
 import build.Version.Identifier.Beta
 import build.Version.Identifier.RC
+import build.Version.Identifier.SNAPSHOT
 
 /**
  * Represents a base class for different versioning strategies.
@@ -34,7 +34,7 @@ sealed class Version {
 
   /** Enumerates common pre-release identifiers for software versions. */
   enum class Identifier {
-    Alpha, Beta, RC, Release
+    Alpha, Beta, RC, Release, SNAPSHOT
   }
 
   /**
@@ -88,17 +88,18 @@ sealed class Version {
 
     private fun preRelease(): String = when (identifier) {
       Identifier.Release, null -> ""
+      SNAPSHOT -> "-SNAPSHOT"
       else -> "-${identifier.name.lowercase()}"
     }
 
     private fun buildMetadata() = buildString {
       when (identifier) {
-        Alpha, Beta, RC -> metadata?.run {
+        Alpha, Beta, RC, SNAPSHOT -> metadata?.run {
           var separator = "+"
           listOf(
             buildNumber?.takeIf { it > 0 },
             buildTime,
-            gitBranch?.takeIf { it !in listOf("main", "develop") && !it.contains("/") },
+            gitBranch?.takeIf { it !in listOf("main") && !it.contains("/") },
             gitSha
           ).mapNotNull { it }.forEach { data ->
             append(separator).append(data).also { separator = "." }
