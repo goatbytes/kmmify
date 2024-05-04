@@ -49,21 +49,16 @@ fun Project.exec(command: String) = external.CommandLine(this).execute(command).
  */
 @Suppress("NOTHING_TO_INLINE")
 inline fun KotlinMultiplatformExtension.appleTargetsWithFramework(baseName: String) {
-  // List of iOS targets
-  listOf(iosX64(), iosArm64()).forEach { target ->
-    target.binaries.framework(baseName)
-  }
-  // macOS targets
-  listOf(macosX64(), macosArm64()).forEach { target ->
-    target.binaries.framework(baseName)
-  }
-  // tvOS targets
-  listOf(tvosX64(), tvosArm64()).forEach { target ->
-    target.binaries.framework(baseName)
-  }
-  // watchOS targets
-  listOf(watchosX64(), watchosArm64(), watchosArm32()).forEach { target ->
-    target.binaries.framework(baseName)
+  val iosTargets = listOf(iosX64(), iosArm64())
+  val macosTargets = listOf(macosX64(), macosArm64())
+  val tvosTargets = listOf(tvosX64(), tvosArm64())
+  val watchosTargets = listOf(watchosX64(), watchosArm64(), watchosArm32())
+  val targets = iosTargets + macosTargets + tvosTargets + watchosTargets
+  targets.forEach { target ->
+    target.binaries.framework {
+      this.baseName = baseName
+      this.freeCompilerArgs += "-Xbinary=bundleId=${BuildConfig.GROUP}.kotlin"
+    }
   }
 }
 
