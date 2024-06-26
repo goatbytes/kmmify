@@ -10,6 +10,7 @@ build/
 out/
 **/build/
 local-build-outputs/
+.kotlin
 
 # Gradle #
 .gradle/
