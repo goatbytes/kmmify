@@ -1,0 +1,28 @@
+$dokka.format:html-v1
+$dokka.linkExtension:html
+$dokka.location:io.goatbytes.kmmify////PointingToDeclaration/core/io.goatbytes.kmmify/index.html
+$dokka.location:io.goatbytes.kmmify/Platform///PointingToDeclaration/core/io.goatbytes.kmmify/-platform/index.html
+$dokka.location:io.goatbytes.kmmify/Platform/Platform/#/PointingToDeclaration/core/io.goatbytes.kmmify/-platform/-platform.html
+$dokka.location:io.goatbytes.kmmify/Platform/type/#/PointingToDeclaration/core/io.goatbytes.kmmify/-platform/type.html
+$dokka.location:io.goatbytes.kmmify/PlatformType.Android///PointingToDeclaration/core/io.goatbytes.kmmify/-platform-type/-android/index.html
+$dokka.location:io.goatbytes.kmmify/PlatformType.Android/name/#/PointingToDeclaration/core/io.goatbytes.kmmify/-platform-type/-android/name.html
+$dokka.location:io.goatbytes.kmmify/PlatformType.JS///PointingToDeclaration/core/io.goatbytes.kmmify/-platform-type/-j-s/index.html
+$dokka.location:io.goatbytes.kmmify/PlatformType.JS/name/#/PointingToDeclaration/core/io.goatbytes.kmmify/-platform-type/-j-s/name.html
+$dokka.location:io.goatbytes.kmmify/PlatformType.JVM///PointingToDeclaration/core/io.goatbytes.kmmify/-platform-type/-j-v-m/index.html
+$dokka.location:io.goatbytes.kmmify/PlatformType.JVM/name/#/PointingToDeclaration/core/io.goatbytes.kmmify/-platform-type/-j-v-m/name.html
+$dokka.location:io.goatbytes.kmmify/PlatformType.Native.IOS///PointingToDeclaration/core/io.goatbytes.kmmify/-platform-type/-native/-i-o-s/index.html
+$dokka.location:io.goatbytes.kmmify/PlatformType.Native.IOS/name/#/PointingToDeclaration/core/io.goatbytes.kmmify/-platform-type/-native/-i-o-s/name.html
+$dokka.location:io.goatbytes.kmmify/PlatformType.Native.Linux///PointingToDeclaration/core/io.goatbytes.kmmify/-platform-type/-native/-linux/index.html
+$dokka.location:io.goatbytes.kmmify/PlatformType.Native.Linux/name/#/PointingToDeclaration/core/io.goatbytes.kmmify/-platform-type/-native/-linux/name.html
+$dokka.location:io.goatbytes.kmmify/PlatformType.Native.MacOS///PointingToDeclaration/core/io.goatbytes.kmmify/-platform-type/-native/-mac-o-s/index.html
+$dokka.location:io.goatbytes.kmmify/PlatformType.Native.MacOS/name/#/PointingToDeclaration/core/io.goatbytes.kmmify/-platform-type/-native/-mac-o-s/name.html
+$dokka.location:io.goatbytes.kmmify/PlatformType.Native.TVOS///PointingToDeclaration/core/io.goatbytes.kmmify/-platform-type/-native/-t-v-o-s/index.html
+$dokka.location:io.goatbytes.kmmify/PlatformType.Native.TVOS/name/#/PointingToDeclaration/core/io.goatbytes.kmmify/-platform-type/-native/-t-v-o-s/name.html
+$dokka.location:io.goatbytes.kmmify/PlatformType.Native.WatchOS///PointingToDeclaration/core/io.goatbytes.kmmify/-platform-type/-native/-watch-o-s/index.html
+$dokka.location:io.goatbytes.kmmify/PlatformType.Native.WatchOS/name/#/PointingToDeclaration/core/io.goatbytes.kmmify/-platform-type/-native/-watch-o-s/name.html
+$dokka.location:io.goatbytes.kmmify/PlatformType.Native///PointingToDeclaration/core/io.goatbytes.kmmify/-platform-type/-native/index.html
+$dokka.location:io.goatbytes.kmmify/PlatformType.Native/Native/#/PointingToDeclaration/core/io.goatbytes.kmmify/-platform-type/-native/-native.html
+$dokka.location:io.goatbytes.kmmify/PlatformType///PointingToDeclaration/core/io.goatbytes.kmmify/-platform-type/index.html
+$dokka.location:io.goatbytes.kmmify/PlatformType/name/#/PointingToDeclaration/core/io.goatbytes.kmmify/-platform-type/name.html
+io.goatbytes.kmmify
+
